@@ -119,10 +119,68 @@ namespace HomeworkModule4
 
             #region Menu - Driven Program
 
+            Console.WriteLine("Enter the first Integer: ");
+            string firstInteger = Console.ReadLine();
+            int intFirstInteger = int.Parse(firstInteger);
+
+            Console.WriteLine("Enter the second Integer: ");
+            string secondInteger = Console.ReadLine();
+            int intSecondInteger = int.Parse(secondInteger);
+
+            Console.WriteLine();
+
+            Console.WriteLine(@"Here are the options :
+            1 - Addition.
+            2 - Subtraction.
+            3 - Multiplication.
+            4 - Division.
+            5 - Exit.");
+
+            Console.WriteLine();
+
+            Console.WriteLine("Enter option number: ");
+            string optionNumber = Console.ReadLine();
+
+            string addition = "1";
+            string subtraction = "2";
+            string multiplication = "3";
+            string division = "4";
+            string exit = "5";
+
+            if (optionNumber == addition)
+            {
+                int intAddition = intFirstInteger + intSecondInteger;
+                Console.WriteLine($"Addition: {intFirstInteger} + {intSecondInteger} = {intAddition}");
+            }
+            else if (optionNumber == subtraction)
+            {
+                int intSubtraction = intFirstInteger - intSecondInteger;
+                Console.WriteLine($"Substraction: {intFirstInteger} - {intSecondInteger} = {intSubtraction}");
+            }
+            else if (optionNumber == multiplication)
+            {
+                int intMultiplication = intFirstInteger * intSecondInteger;
+                Console.WriteLine($"Multiplication: {intFirstInteger} * {intSecondInteger} = {intMultiplication}");
+            }
+            else if (optionNumber == division)
+            {
+                int intDivision = intFirstInteger / intSecondInteger;
+                Console.WriteLine($"Division: {intFirstInteger} / {intSecondInteger} = {intDivision}");
+            }
+            else if (optionNumber == exit)
+            {
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Incorrect input.");
+            }
+
+            Console.ReadLine();
 
             #endregion
 
-            
+
         }
     }
 }
